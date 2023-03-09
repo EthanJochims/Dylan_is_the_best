@@ -8,8 +8,15 @@ def encode(phrase):
     return new_phrase
 
 
-def decode(phrase):
-    pass
+def decode(new_phrase):
+    old_phrase = ""
+    for element in new_phrase:
+        element = int(element)
+        element -= 3
+        element = str(element)
+        old_phrase += element
+    return old_phrase
+
 
 
 def main():
@@ -27,6 +34,11 @@ def main():
         if option == '1':
             phrase = input('Enter your phrase: ')
         elif option == '2':
-            print('Encoded phrase is', encode(phrase))
+            new_phrase = encode(phrase)
+            print('Encoded phrase is', new_phrase)
         elif option == '3':
-            print('Decoded phrase is', decode(phrase))
+            print('Decoded phrase is', decode(new_phrase))
+
+
+if __name__ == '__main__':
+    main()
