@@ -1,5 +1,12 @@
 def encode(phrase):
-    pass
+    new_phrase = ""
+    for element in phrase:
+        element = int(element)
+        element += 3
+        element = str(element)
+        new_phrase += element
+    return new_phrase
+
 
 def decode(phrase):
     pass
